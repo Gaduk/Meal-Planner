@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Meal Planner</string>
+    <string name="menu_header_text">Питайтесь\n правильно!</string>
+    <string name="help_button_text">Справка</string>
+    <string name="calorie_settings_button_text">Настройка калорий</string>
+    <string name="dishes_list_button_text">Список блюд</string>
+    <string name="breakfast_button_text">Завтрак</string>
+    <string name="lunch_button_text">Обед</string>
+    <string name="dinner_button_text">Ужин</string>
+    <string name="recipe_header">Рецепт</string>
+    <string name="help_calorie_header">Диапазон ккал в день</string>
+    <string name="save_button_text">Сохранить</string>
+    <string name="default_button_text">По умолчанию</string>
+    <string name="update_button_text">Обновить</string>
+    <string name="kcal">ккал</string>
+    <string name="delete">Удалить</string>
+    <string name="ok">ОК</string>
+    <string name="about">О программе</string>
+
+    <string name="settings_error_empty_field">Необходимо заполнить все поля</string>
+    <string name="settings_error_invalid_percents">Проценты в сумме должны равняться 100%</string>
+    <string name="settings_error_invalid_calories">Минимум калорий должен быть меньше максимума</string>
+
+    <string name="editor_error_empty_field">Необходимо заполнить все поля</string>
+    <string name="editor_error_meal">Необходимо отметить хотя бы один из приемов пищи</string>
+
+    <string name="help_text">Работу выполнил\nКозенко Даниил Михайлович\nгр.351012</string>
+
+    <string name="main_header">Список блюд</string>
+    <string name="breakfast_header">Завтрак</string>
+    <string name="lunch_header">Обед</string>
+    <string name="dinner_header">Ужин</string>
+    <string name="settings_header">"Настройка калорий"</string>
+
+    <string name="action_bar_empty_title"></string>
+    <string name="action_bar_settings_title">Настройки</string>
+    <string name="action_bar_info_title">О программе</string>
+    была "справка"
+    <string name="action_bar_search_title">Поиск</string>
+    <string name="action_bar_save_title">Сохранить</string>
+    <string name="action_bar_edit_title">Изменить</string>
+
+    <string-array name="dish_types">
+        <item>Первое</item>
+        <item>Второе</item>
+        <item>Напиток</item>
+        <item>Перекус</item>
+        <item>Десерт</item>
+        <item>Другое</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

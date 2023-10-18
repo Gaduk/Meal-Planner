@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="SpinnerDropDownItemStyle" parent="Widget.AppCompat.DropDownItem.Spinner">
+        <item name="android:background">@color/light_flesh</item>
+        <item name="android:textColor">@color/grey</item>
+    </style>
+
+    <style name="CustomChip" parent="@style/Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@drawable/selector_chip_background</item>
+    </style>
+
+    <!--Toolbar-->
+    <style name="Toolbar" parent ="Widget.AppCompat.Toolbar">
+<!--        <item name="titleTextAppearance">@style/ToolbarTitleTextAppearance</item>-->
+    </style>
+    <style name="ToolbarTitleTextAppearance" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textColor">@color/deep_dark_green</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="ToolbarPopupMenu" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:textColor">@color/brown</item>
+        <item name="android:backgroundTint">@color/light_flesh</item>
+    </style>
+
+    <style name="MainActivityTheme" parent="@style/Theme.CalorieCounter">
+        <item name="colorSecondary">@color/deep_dark_green</item>
+
+    </style>
+
+    <style name="MyCardView" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MaterialCardView.Cut</item>
+    </style>
+
+
+    <style name="ShapeAppearanceOverlay.MaterialCardView.Cut" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">8dp</item>
+        <item name="cornerSizeTopLeft">8dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="SplashTheme" parent="@style/Theme.CalorieCounter">
+        <item name="android:windowBackground">@drawable/splash</item>
+    </style>
+</resources>
