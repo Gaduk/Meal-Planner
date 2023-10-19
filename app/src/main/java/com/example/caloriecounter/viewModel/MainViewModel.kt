@@ -48,7 +48,13 @@ open class MainViewModel(private val repository: Repository) : ViewModel() {
 
     suspend fun saveBreakfast() {
         repository.deleteDishesByListType(ListType.BREAKFAST.ordinal)
-        for(dish in generateBreakfast()) {
+        var breakfast : ArrayList<Dish> = generateBreakfast()
+        var n : Int = 0;
+        while(breakfast.isEmpty() && n < 10000) {
+            breakfast = generateBreakfast()
+            n++
+        }
+        for(dish in breakfast) {
             dish.id = null
             dish.listType = ListType.BREAKFAST.ordinal
             repository.insertDish(dish)
@@ -56,7 +62,13 @@ open class MainViewModel(private val repository: Repository) : ViewModel() {
     }
     suspend fun saveLunch() {
         repository.deleteDishesByListType(ListType.LUNCH.ordinal)
-        for(dish in generateLunch()) {
+        var lunch : ArrayList<Dish> = generateLunch()
+        var n : Int = 0;
+        while(lunch.isEmpty() && n < 10000) {
+            lunch = generateLunch()
+            n++
+        }
+        for(dish in lunch) {
             dish.id = null
             dish.listType = ListType.LUNCH.ordinal
             repository.insertDish(dish)
@@ -64,7 +76,13 @@ open class MainViewModel(private val repository: Repository) : ViewModel() {
     }
     suspend fun saveDinner() {
         repository.deleteDishesByListType(ListType.DINNER.ordinal)
-        for(dish in generateDinner()) {
+        var dinner : ArrayList<Dish> = generateDinner()
+        var n : Int = 0;
+        while(dinner.isEmpty() && n < 10000) {
+            dinner = generateDinner()
+            n++
+        }
+        for(dish in dinner) {
             dish.id = null
             dish.listType = ListType.DINNER.ordinal
             repository.insertDish(dish)
@@ -255,18 +273,16 @@ open class MainViewModel(private val repository: Repository) : ViewModel() {
                 restCalories -= dish.calories.toInt()
             }
         }
-        else return breakfast
+        //else return breakfast
 
         var k = 0
         if(commonList.isNotEmpty()) {
+            dish = commonList.random()
             while (restCalories > 0 && k < maxNumberOfIterations) {
                 k++
                 dish = commonList.random()
-                if (restCalories - dish.calories.toInt() <
-                    maxCalorie - minCalorie) {
-                    breakfast.add(dish)
-                    restCalories -= dish.calories.toInt()
-                }
+                breakfast.add(dish)
+                restCalories -= dish.calories.toInt()
             }
             if(k < maxNumberOfIterations) {
                 breakfast.remove(dish)
@@ -276,7 +292,18 @@ open class MainViewModel(private val repository: Repository) : ViewModel() {
                 breakfast.clear()
                 return breakfast
             }
+            k = 0
+            while (k < maxNumberOfIterations) {
+                k++
+                dish = commonList.random()
+                if(restCalories - dish.calories.toInt() > 0 &&
+                    restCalories - dish.calories.toInt() < (maxCalorie - minCalorie) * breakfastStake) {
+                    breakfast.add(dish)
+                    return breakfast
+                }
+            }
         }
+        breakfast.clear()
         return breakfast
     }
     private suspend fun generateLunch() : ArrayList<Dish> {
