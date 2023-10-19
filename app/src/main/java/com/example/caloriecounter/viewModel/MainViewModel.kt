@@ -325,7 +325,7 @@ open class MainViewModel(private val repository: Repository) : ViewModel() {
                 restCalories -= dish.calories.toInt()
             }
         }
-        else return lunch
+        //else return lunch
 
         if(mainDishList.isNotEmpty()) {
             dish = mainDishList.random()
@@ -334,7 +334,7 @@ open class MainViewModel(private val repository: Repository) : ViewModel() {
                 restCalories -= dish.calories.toInt()
             }
         }
-        else return lunch
+        //else return lunch
 
         if(soupList.isNotEmpty()) {
             dish = soupList.random()
@@ -343,18 +343,16 @@ open class MainViewModel(private val repository: Repository) : ViewModel() {
                 restCalories -= dish.calories.toInt()
             }
         }
-        else return lunch
+        //else return lunch
 
         var k = 0
         if(commonList.isNotEmpty()) {
+            dish = commonList.random()
             while (restCalories > 0 && k < maxNumberOfIterations) {
                 k++
                 dish = commonList.random()
-                if (restCalories - dish.calories.toInt() <
-                    maxCalorie - minCalorie) {
-                    lunch.add(dish)
-                    restCalories -= dish.calories.toInt()
-                }
+                lunch.add(dish)
+                restCalories -= dish.calories.toInt()
             }
             if(k < maxNumberOfIterations) {
                 lunch.remove(dish)
@@ -364,8 +362,19 @@ open class MainViewModel(private val repository: Repository) : ViewModel() {
                 lunch.clear()
                 return lunch
             }
-        }
 
+            k = 0
+            while (k < maxNumberOfIterations) {
+                k++
+                dish = commonList.random()
+                if(restCalories - dish.calories.toInt() > 0 &&
+                    restCalories - dish.calories.toInt() < (maxCalorie - minCalorie) * lunchStake) {
+                    lunch.add(dish)
+                    return lunch
+                }
+            }
+        }
+        lunch.clear()
         return lunch
     }
     private suspend fun generateDinner() : ArrayList<Dish> {
@@ -376,53 +385,62 @@ open class MainViewModel(private val repository: Repository) : ViewModel() {
         val commonList = doTypeFiltration(list, Type.SNACK, Type.OTHER, Type.DESSERT, Type.SOUP)
 
         var restCalories: Int = (maxCalorie * dinnerStake).toInt()
-        val lunch: ArrayList<Dish> = ArrayList()
+        val dinner: ArrayList<Dish> = ArrayList()
         var dish: Dish
 
         if(drinkList.isNotEmpty()) {
             dish = drinkList.random()
             if (dish.calories.toInt() <= restCalories) {
-                lunch.add(dish)
+                dinner.add(dish)
                 restCalories -= dish.calories.toInt()
             }
         }
-        else return lunch
+        //else return lunch
 
         if(mainDishList.isNotEmpty()) {
             dish = mainDishList.random()
             if (dish.calories.toInt() <= restCalories) {
-                lunch.add(dish)
+                dinner.add(dish)
                 restCalories -= dish.calories.toInt()
             }
         }
-        else return lunch
+        //else return lunch
 
         var k = 0
         var soupIsInList = false
         if(commonList.isNotEmpty()) {
+            dish = commonList.random()
             while (restCalories > 0 && k < maxNumberOfIterations) {
                 k++
                 dish = commonList.random()
-                if (restCalories - dish.calories.toInt() <
-                    maxCalorie - minCalorie) {
-                    if(dish.type == Type.SOUP.ordinal && soupIsInList)
-                        continue
-                    if(dish.type == Type.SOUP.ordinal && !soupIsInList)
-                        soupIsInList = true
-                    lunch.add(dish)
-                    restCalories -= dish.calories.toInt()
-                }
+                if(dish.type == Type.SOUP.ordinal && soupIsInList)
+                    continue
+                if(dish.type == Type.SOUP.ordinal && !soupIsInList)
+                    soupIsInList = true
+                dinner.add(dish)
+                restCalories -= dish.calories.toInt()
             }
             if(k < maxNumberOfIterations) {
-                lunch.remove(dish)
+                dinner.remove(dish)
                 restCalories += dish.calories.toInt()
             }
             else {
-                lunch.clear()
-                return lunch
+                dinner.clear()
+                return dinner
+            }
+
+            k = 0
+            while (k < maxNumberOfIterations) {
+                k++
+                dish = commonList.random()
+                if(restCalories - dish.calories.toInt() > 0 &&
+                    restCalories - dish.calories.toInt() < (maxCalorie - minCalorie) * dinnerStake) {
+                    dinner.add(dish)
+                    return dinner
+                }
             }
         }
-
-        return lunch
+        dinner.clear()
+        return dinner
     }
 }
