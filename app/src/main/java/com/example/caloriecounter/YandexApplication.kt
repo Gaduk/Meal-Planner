@@ -9,6 +9,7 @@ class YandexApplication : Application() {
         super.onCreate()
         MobileAds.initialize(this) {
             Log.d("Yandex mobile ads", "SDK initialized");
+
         }
     }
 }

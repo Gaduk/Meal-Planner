@@ -30,6 +30,8 @@ import com.example.caloriecounter.view.fragments.LunchFragment
 import com.example.caloriecounter.viewModel.MainViewModel
 import com.example.caloriecounter.viewModel.MainViewModelFactory
 import com.google.gson.Gson
+import com.yandex.mobile.ads.banner.BannerAdSize.stickySize
+import com.yandex.mobile.ads.common.AdRequest
 
 class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
 
@@ -102,6 +104,12 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
             }
         }
         this.onBackPressedDispatcher.addCallback(this, callback)
+
+        //YandexAdsBanner
+        binding.banner.setAdUnitId("R-M-3478681-1")
+        binding.banner.setAdSize(stickySize(this, 290))
+        val adRequest = AdRequest.Builder().build()
+        binding.banner.loadAd(adRequest)
     }
 
     //Settings
