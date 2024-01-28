@@ -7,37 +7,37 @@
 
     <fragment
         android:id="@+id/breakfast_fragment"
-        android:name="com.example.caloriecounter.view.fragments.BreakfastFragment"
+        android:name="com.example.mealplanner.view.fragments.BreakfastFragment"
         android:label="fragment_breakfast"
         tools:layout="@layout/fragment_breakfast" />
     <fragment
         android:id="@+id/dish_list_fragment"
-        android:name="com.example.caloriecounter.view.fragments.DishListFragment"
+        android:name="com.example.mealplanner.view.fragments.DishListFragment"
         android:label="fragment_dish_list"
         tools:layout="@layout/fragment_dish_list" />
     <fragment
         android:id="@+id/dinner_fragment"
-        android:name="com.example.caloriecounter.view.fragments.DinnerFragment"
+        android:name="com.example.mealplanner.view.fragments.DinnerFragment"
         android:label="fragment_dinner"
         tools:layout="@layout/fragment_dinner" />
     <fragment
         android:id="@+id/lunch_fragment"
-        android:name="com.example.caloriecounter.view.fragments.LunchFragment"
+        android:name="com.example.mealplanner.view.fragments.LunchFragment"
         android:label="fragment_lunch"
         tools:layout="@layout/fragment_lunch" />
     <activity
         android:id="@+id/dish_activity"
-        android:name="com.example.caloriecounter.view.activities.DishActivity"
+        android:name="com.example.mealplanner.view.activities.DishActivity"
         android:label="activity_dish"
         tools:layout="@layout/activity_dish" />
     <activity
         android:id="@+id/editor_activity"
-        android:name="com.example.caloriecounter.view.activities.EditorActivity"
+        android:name="com.example.mealplanner.view.activities.EditorActivity"
         android:label="activity_editor"
         tools:layout="@layout/activity_editor" />
     <activity
         android:id="@+id/settings_activity"
-        android:name="com.example.caloriecounter.view.activities.SettingsActivity"
+        android:name="com.example.mealplanner.view.activities.SettingsActivity"
         android:label="activity_settings"
         tools:layout="@layout/activity_settings" />
 </navigation>

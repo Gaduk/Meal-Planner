@@ -156,7 +156,7 @@
           android:layout_height="match_parent"
           android:paddingLeft="10dp"
           android:paddingRight="10dp"
-          android:text="Recipe text"
+          android:text="@string/recipe_text"
           android:textAlignment="textStart"
           android:textSize="16sp" />
     </LinearLayout>

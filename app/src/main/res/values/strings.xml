@@ -15,7 +15,7 @@
     <string name="kcal">ккал</string>
     <string name="delete">Удалить</string>
     <string name="ok">ОК</string>
-    <string name="about">О программе</string>
+    <string name="about">Справка</string>
 
     <string name="settings_error_empty_field">Необходимо заполнить все поля</string>
     <string name="settings_error_invalid_percents">Проценты в сумме должны равняться 100%</string>
@@ -24,7 +24,15 @@
     <string name="editor_error_empty_field">Необходимо заполнить все поля</string>
     <string name="editor_error_meal">Необходимо отметить хотя бы один из приемов пищи</string>
 
-    <string name="help_text">Работу выполнил\nКозенко Даниил Михайлович\nгр.351012</string>
+    <string name="help_text">
+        Добро пожаловать в приложение Meal Planner!\n\nВ первой вкладке меню навигации вы можете
+        пополнить список теми блюдами, которые часто готовите.
+        Для примера вам уже доступно 12 блюд. Их можно удалить при помощи длительного нажатия.\n\nНа
+        остальных вкладках случайным образом с учетом настроек
+        формируются завтрак, обед и ужин из блюд указанного выше списка.\n\nВ настройках, расположенных
+        в правом верхнем углу экрана можно указать диапазон ккал на день
+        и процентное соотношение приемов пищи.\n\nПриятного аппетита!
+    </string>
 
     <string name="main_header">Список блюд</string>
     <string name="breakfast_header">Завтрак</string>
@@ -34,11 +42,46 @@
 
     <string name="action_bar_empty_title"></string>
     <string name="action_bar_settings_title">Настройки</string>
-    <string name="action_bar_info_title">О программе</string>
+    <string name="action_bar_info_title">Справка</string>
     была "справка"
     <string name="action_bar_search_title">Поиск</string>
     <string name="action_bar_save_title">Сохранить</string>
     <string name="action_bar_edit_title">Изменить</string>
+
+    <string name = "language">Язык</string>
+    <string name = "russian">Русский</string>
+    <string name = "english">Английский</string>
+
+    <string name = "name">Название</string>
+    <string name = "recipe_text">Текст рецепта</string>
+
+    <string name="borscht">Борщ</string>
+    <string name="cabbage_roll">Голубцы</string>
+    <string name="coffee">Кофе</string>
+    <string name="ice_cream">Мороженое</string>
+    <string name="carbonara_pasta">Паста карбонара</string>
+    <string name="tea">Чай</string>
+    <string name="fish_soup">Уха</string>
+    <string name="yogurt">Йогурт</string>
+    <string name="omelette">Омлет</string>
+    <string name="vegetable_salad">Овощной салат</string>
+    <string name="apple">Яблоко</string>
+    <string name="banana">Банан</string>
+
+    <string-array name="dish_names">
+        <item>Борщ</item>
+        <item>Голубцы</item>
+        <item>Кофе</item>
+        <item>Мороженое</item>
+        <item>Паста карбонара</item>
+        <item>Чай</item>
+        <item>Уха</item>
+        <item>Йогурт</item>
+        <item>Омлет</item>
+        <item>Овощной салат</item>
+        <item>Яблоко</item>
+        <item>Банан</item>
+    </string-array>
 
     <string-array name="dish_types">
         <item>Первое</item>

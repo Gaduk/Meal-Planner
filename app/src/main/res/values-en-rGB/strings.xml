@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">Meal Planner</string>
+    <string name="menu_header_text">Eat\nRight!</string>
+    <string name="help_button_text">Help</string>
+    <string name="calorie_settings_button_text">Calorie Settings</string>
+    <string name="dishes_list_button_text">Dishes List</string>
+    <string name="breakfast_button_text">Breakfast</string>
+    <string name="lunch_button_text">Lunch</string>
+    <string name="dinner_button_text">Dinner</string>
+    <string name="recipe_header">Recipe</string>
+    <string name="help_calorie_header">Daily Calorie Range</string>
+    <string name="save_button_text">Save</string>
+    <string name="default_button_text">Default</string>
+    <string name="update_button_text">Update</string>
+    <string name="kcal">kcal</string>
+    <string name="delete">Delete</string>
+    <string name="ok">OK</string>
+    <string name="about">Help</string>
+
+    <string name="settings_error_empty_field">All fields must be filled</string>
+    <string name="settings_error_invalid_percents">Percentages must add up to 100%</string>
+    <string name="settings_error_invalid_calories">Minimum calories should be less than maximum</string>
+
+    <string name="editor_error_empty_field">All fields must be filled</string>
+    <string name="editor_error_meal">At least one meal must be selected</string>
+
+    <string name="help_text">
+        Welcome to the Meal Planner app!\n\nIn the first tab of the navigation menu, you can
+        add dishes that you frequently prepare.
+        For example, you already have access to 12 dishes. You can delete them by long-pressing.\n\nOn
+        the other tabs, breakfast, lunch, and dinner are randomly generated based on the settings
+        from the above-mentioned list of dishes.\n\nIn the settings, located in the top right corner of the screen,
+        you can specify the daily calorie range and the percentage distribution of meals.\n\nEnjoy your meal!
+    </string>
+
+    <string name="main_header">Dishes List</string>
+    <string name="breakfast_header">Breakfast</string>
+    <string name="lunch_header">Lunch</string>
+    <string name="dinner_header">Dinner</string>
+    <string name="settings_header">Calorie Settings</string>
+
+    <string name="action_bar_empty_title"></string>
+    <string name="action_bar_settings_title">Settings</string>
+    <string name="action_bar_info_title">Help</string>
+    <string name="action_bar_search_title">Search</string>
+    <string name="action_bar_save_title">Save</string>
+    <string name="action_bar_edit_title">Edit</string>
+
+    <string name="language">Language</string>
+    <string name="russian">Russian</string>
+    <string name="english">English</string>
+
+    <string name = "name">Name</string>
+    <string name = "recipe_text">Recipe text</string>
+
+    <string name="borscht">Borscht</string>
+    <string name="cabbage_roll">Cabbage Rolls</string>
+    <string name="coffee">Coffee</string>
+    <string name="ice_cream">Ice Cream</string>
+    <string name="carbonara_pasta">Carbonara Pasta</string>
+    <string name="tea">Tea</string>
+    <string name="fish_soup">Fish Soup</string>
+    <string name="yogurt">Yogurt</string>
+    <string name="omelette">Omelette</string>
+    <string name="vegetable_salad">Vegetable Salad</string>
+    <string name="apple">Apple</string>
+    <string name="banana">Banana</string>
+
+    <string-array name="dish_names">
+        <item>Borscht</item>
+        <item>Cabbage Rolls</item>
+        <item>Coffee</item>
+        <item>Ice Cream</item>
+        <item>Carbonara Pasta</item>
+        <item>Tea</item>
+        <item>Fish Soup</item>
+        <item>Yogurt</item>
+        <item>Omelette</item>
+        <item>Vegetable Salad</item>
+        <item>Apple</item>
+        <item>Banana</item>
+    </string-array>
+
+    <string-array name="dish_types">
+        <item>First Course</item>
+        <item>Main Course</item>
+        <item>Drink</item>
+        <item>Snack</item>
+        <item>Dessert</item>
+        <item>Other</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

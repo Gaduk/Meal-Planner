@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.caloriecounter'
+    namespace 'com.example.mealplanner'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.caloriecounter"
+        applicationId "com.example.mealplanner"
         minSdk 21
         targetSdk 33
         versionCode 1
